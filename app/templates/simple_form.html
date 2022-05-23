@@ -1,0 +1,12 @@
+<form method="post" action="/new_instrument">
+   {% for field in form %}
+   {% if field.name == "csurf_token" or field.name == 'submit' %}
+   {{field}}
+   {% else %}
+   <p>
+      {{field.label}}{{field}}
+   </p>
+   {% endif %}
+   {% endfor %}
+</form>
+   
